@@ -10,7 +10,7 @@ var extServerOptions = {
     method: 'GET'
 };
 
-cron.schedule('*/60 * * * *', function(){
+cron.schedule('*/100 * * * *', function(){
   console.log('running a task every two minutes');
   rp('http://coinmarketcap-nexuist.rhcloud.com/api/eth')
     .then(function (htmlString) {
